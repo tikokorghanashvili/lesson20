@@ -2,6 +2,7 @@
     max-width: 700px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .container{
     position: relative;
@@ -20,7 +21,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 20px;
-    font-size: 25px;
+    font-size: 30px;
 }
 .accordion-description{
     width: 100%;
@@ -35,7 +36,7 @@
 }
 .container.active .accordion-title::before{
     content: ' - ';
-    font-size: 25px;
+    font-size: 30px;
 }
 a {
     text-decoration: none;
@@ -46,29 +47,37 @@ a {
     padding: 0;
     box-sizing: border-box;
 }
-ul {
+.ul{
     list-style-type: none;
 }
 .navbar-wraper{
     display: flex;
     justify-content: space-between;
-    background-color: yellow;
+    background-color: aqua;
     position: relative;
     padding: 20px;
+    height: 50px;
 }
-ul {
-    display: flex;
+.burger{
+    display: none;
+    cursor: pointer;
 }
-li {
-    margin: 10px;
+.burgerbar1{
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 5px auto;
+    transition: 0.5s linear;
+    background-color: black;
 }
 .toggle-button{
     position: absolute;
     top: 20px;
     right: 20px;
-    color: aqua;
+    color: red;
     font-size: 25px;
     display: none;
+    cursor: pointer;
 }
 @media(max-width:768px){
     .toggle-button{
@@ -76,5 +85,37 @@ li {
     }
     .navbar{
         display: none;
+    }
+    .navbar-wraper{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .ul{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+    }
+    li {
+        margin: 15px 0;
+    }
+    .navbar.activeNavigation{
+        display: block;
+        transition: 0.5s;
+    }
+}
+@media(max-width:768px){
+    .burger{
+        display: block;
+    }
+    .burger.active.burgerbar1:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active.burgerbar1:nth-child(2){
+        display: none;
+    }
+    .burger.active.burgerbar1:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
