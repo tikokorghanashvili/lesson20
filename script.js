@@ -9,15 +9,16 @@ for (let i=0; i<accordion.length; i++){
 
 
 let navigation=document.getElementById('navbarlinks');
-let toggleButton=document.getElementById('burger');
+let toggleButton=document.getElementById('burg');
 
 toggleButton.addEventListener('click',function(){
     navigation.classList.toggle('activeNavigation');
+    toggleButton.classList.toggle('toggle');
 });
 
 
-let burger=document.querySelectorAll('.burger');
-let burgerbar1=document.querySelectorAll('.ul');
+let burger=document.getElementById('burg');
+let burgerbar1=document.getElementById('');
 
 burger.addEventListener('click',()=> {
     burger.classList.toggle('active');

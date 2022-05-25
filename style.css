@@ -40,6 +40,7 @@
 }
 a {
     text-decoration: none;
+    width: 50px;
 }
 /* ყველა ელემენტზე მოქმედება */
 * {
@@ -49,70 +50,94 @@ a {
 }
 .ul{
     list-style-type: none;
+    display: flex;
+}
+li {
+    margin-right: 20px;
 }
 .navbar-wraper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: aqua;
     position: relative;
     padding: 20px;
     height: 50px;
+    width: 100%;
+}
+.navbar{
+    display: flex;
 }
 .burger{
     display: none;
     cursor: pointer;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    height: 30px;
 }
 .burgerbar1{
     display: block;
-    width: 25px;
+    width: 100%;
     height: 5px;
-    margin: 5px auto;
     transition: 0.5s linear;
     background-color: black;
-}
-.toggle-button{
     position: absolute;
-    top: 20px;
-    right: 20px;
-    color: red;
-    font-size: 25px;
+    top: 50%;
+}
+.burgerbar2{
+    top: 20%;
+}
+.burgerbar4{
+    top: 80%;
+}
+.toggle.burgerbar2{
+    top: 50%;
+    transform: translate(-50%,-50%)rotate(45deg);
+}
+.toggle.burgerbar3{
     display: none;
-    cursor: pointer;
+}
+.toggle.burgerbar4{
+    top: 50%;
+    transform: translate(-50%,-50%)rotate(45deg);
 }
 .active{
     display: block;
 }
+
 @media(max-width:768px){
-    .toggle-button{
-        display: block;
-    }
     .navbar{
         display: none;
     }
     .navbar-wraper{
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
     }
     .ul{
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: fixed;
     }
     li {
-        margin: 15px 0;
+        margin: 15px;
     }
-    .navbar.activeNavigation{
-        display: block;
+    .navbar-wraper.activeNavigation{
         transition: 0.5s;
+        height: 200px;
+    }
+    .toggle.ul{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        display: block;
     }
 }
 @media(max-width:768px){
     .burger{
         display: block;
     }
-    .burger.active.burgerbar1:nth-child(1){
+    /* .burger.active.burgerbar1:nth-child(1){
         transform: translateY(8px) rotate(45deg);
     }
     .burger.active.burgerbar1:nth-child(2){
@@ -120,5 +145,5 @@ a {
     }
     .burger.active.burgerbar1:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
-    }
+    } */
 }
