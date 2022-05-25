@@ -79,6 +79,9 @@ a {
     display: none;
     cursor: pointer;
 }
+.active{
+    display: block;
+}
 @media(max-width:768px){
     .toggle-button{
         display: block;

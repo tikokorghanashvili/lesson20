@@ -19,7 +19,7 @@ toggleButton.addEventListener('click',function(){
 let burger=document.querySelectorAll('.burger');
 let burgerbar1=document.querySelectorAll('.ul');
 
-burger.addEventListener('click',()=>{
+burger.addEventListener('click',()=> {
     burger.classList.toggle('active');
     burgerbar1.classList.toggle('active');
 });
