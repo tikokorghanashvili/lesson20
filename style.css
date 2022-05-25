@@ -37,3 +37,44 @@
     content: ' - ';
     font-size: 25px;
 }
+a {
+    text-decoration: none;
+}
+/* ყველა ელემენტზე მოქმედება */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+.navbar-wraper{
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    position: relative;
+    padding: 20px;
+}
+ul {
+    display: flex;
+}
+li {
+    margin: 10px;
+}
+.toggle-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: aqua;
+    font-size: 25px;
+    display: none;
+}
+@media(max-width:768px){
+    .toggle-button{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+}
